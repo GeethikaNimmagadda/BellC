@@ -1,0 +1,77 @@
+<!Doctype html>
+<html>
+<head>courses</head>
+<title> courses </title>
+<body>
+<script>	
+function SaveData() {
+    var a=document.getElementById("list");
+	var b=document.createElement("tr");
+	var c=document.createElement("td");
+	var d=document.createElement("td");
+	var e=document.createElement("td");
+	var f=document.createElement("td");
+	
+
+	c.innerHTML=document.getElementById("Name").value;
+	d.innerHTML=document.getElementById("Duration").value;
+	e.innerHTML=document.getElementById("fee").value;
+	f.innerHTML=document.getElementById("level").value;
+
+
+	b.appendChild(c);
+	b.appendChild(d);
+	b.appendChild(e);
+	b.appendChild(f);
+	
+
+	a.appendChild(b);
+}
+
+	function ClearForm() {
+    document.getElementById("courses").reset();
+}
+	</script>
+	
+	<center>
+	<div id="data">
+	<form id="courses">
+		Name:&nbsp
+		<input type="text" id="Name" value=""> <br><br>
+		Duration:
+		<input type="text" id="Duration" value=""> <br><br>
+		fee:&nbsp&nbsp&nbsp
+		<input type="text" id="fee" value=""> <br><br>
+		level:&nbsp&nbsp&nbsp
+		<select name="level" id="level">
+		<option value="basic">Basic</option>
+		<option value="intermediate">Intermediate</option>
+		<option value="advanced">Advanced</option>
+		<option value="extreme">Extreme</option>
+		</select> <br> <br>
+		<input id="button" type="button" value="Clear" size="8" onclick = "ClearForm()">
+		<input id="button" type="button" value="Save" size="8" onclick= "SaveData()">
+	</form>
+		</div>	
+		<h3>LIST</h3>
+<div id = "tab">
+        <table id = "list" cellspacing = "0px" cellpadding = "20px" text-align = "center">
+            <thead>
+                <tr>
+                    <td>Name</td>
+                    <td>Duration</td>
+                    <td>Fee</td>
+					<td>Level</td>
+					
+                </tr>
+            </thead>
+
+            <tbody>
+
+            </tbody>
+        </table>
+</div>
+
+	</center>
+	</body>
+</html>
